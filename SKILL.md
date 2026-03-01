@@ -230,12 +230,13 @@ skills/genomad/
 | Monad Testnet | 10143 | testnet-rpc.monad.xyz | ✅ Activa |
 | Monad Mainnet | TBD | rpc.monad.xyz | ⏳ Pendiente |
 
-## 📝 Contratos
+## 📝 Contratos (Deployed 2026-03-01)
 
 | Contrato | Address (Testnet) |
 |----------|-------------------|
-| GenomadNFT | `0x9f20494A0FbC929adAC553f4A2FCFa7D2b448Cf0` |
-| BreedingFactory | `0x72D60f32185B67606a533dc28DeC3f88E05788De` |
+| GenomadNFT | `0x190fd355ED38e82a2390C07222C4BcB4DbC4cD20` |
+| BreedingFactory | `0x2703fb336139292c7ED854061072e316727ED7fA` |
+| TraitVerifier | `0xaccaE8B19AD67df4Ce91638855c9B41A5Da90be3` |
 
 ## 🛠️ Exit Codes
 

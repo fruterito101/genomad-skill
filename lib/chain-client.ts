@@ -58,8 +58,9 @@ const monadMainnet = defineChain({
 
 const CONTRACTS = {
   testnet: {
-    genomadNFT: "0x9f20494A0FbC929adAC553f4A2FCFa7D2b448Cf0" as Address,
-    breedingFactory: "0x72D60f32185B67606a533dc28DeC3f88E05788De" as Address,
+    genomadNFT: "0x190fd355ED38e82a2390C07222C4BcB4DbC4cD20" as Address,
+    breedingFactory: "0x2703fb336139292c7ED854061072e316727ED7fA" as Address,
+    traitVerifier: "0xaccaE8B19AD67df4Ce91638855c9B41A5Da90be3" as Address,
   },
   mainnet: {
     genomadNFT: "" as Address, // TBD
