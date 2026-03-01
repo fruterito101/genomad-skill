@@ -1,0 +1,28 @@
+{
+  "name": "genomad-skill",
+  "version": "3.0.0",
+  "description": "Skill oficial de Genomad. Registro, vinculación, activación on-chain, breeding y custody.",
+  "author": "Genomad Team",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "register": "tsx scripts/register.ts",
+    "status": "tsx scripts/status.ts",
+    "read-self": "tsx scripts/read-self.ts",
+    "custody": "tsx scripts/check-custody.ts",
+    "approve": "tsx scripts/approve-breeding.ts",
+    "reject": "tsx scripts/reject-breeding.ts",
+    "pending": "tsx scripts/check-pending.ts",
+    "sync": "tsx scripts/sync-identity.ts",
+    "heartbeat": "tsx scripts/heartbeat-hook.ts"
+  },
+  "dependencies": {
+    "viem": "^2.21.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
+    "@types/node": "^20.14.0"
+  }
+}

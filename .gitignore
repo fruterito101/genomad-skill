@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.env.genomad
+*.log
+suspicious-alerts.log
+.update-state.json

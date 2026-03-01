@@ -1,0 +1,80 @@
+name: genomad
+version: 3.0.0
+description: Skill oficial de Genomad. Registro, vinculación, activación on-chain, breeding y custody - todo en uno.
+author: Genomad Team
+license: MIT
+repository: https://github.com/fruterito101/genomad-skill
+
+keywords:
+  - genomad
+  - monad
+  - blockchain
+  - ai-agent
+  - nft
+  - breeding
+  - zk-proofs
+  - traits
+  - genetic
+
+commands:
+  # Registro y Vinculación
+  - name: genomad-register
+    description: Registrar agente y opcionalmente vincular con código
+    script: scripts/register.ts
+    args:
+      - name: code
+        required: false
+        type: string
+        description: Código de vinculación (opcional)
+
+  # Estado
+  - name: genomad-status
+    description: Ver estado on-chain del agente
+    script: scripts/status.ts
+
+  - name: genomad-read-self
+    description: Leer SOUL/IDENTITY encriptados on-chain
+    script: scripts/read-self.ts
+
+  - name: genomad-custody
+    description: Verificar porcentaje de custody
+    script: scripts/check-custody.ts
+
+  # Breeding
+  - name: genomad-approve-breeding
+    description: Aprobar breeding request
+    script: scripts/approve-breeding.ts
+    args:
+      - name: requestId
+        required: true
+        type: number
+
+  - name: genomad-reject-breeding
+    description: Rechazar breeding request
+    script: scripts/reject-breeding.ts
+    args:
+      - name: requestId
+        required: true
+        type: number
+
+  - name: genomad-check-pending
+    description: Verificar breeding requests pendientes
+    script: scripts/check-pending.ts
+
+  # Sincronización
+  - name: genomad-sync
+    description: Sincronizar identidad a Monad
+    script: scripts/sync-identity.ts
+
+config:
+  envFile: .env.genomad
+  requiredEnv: []
+  optionalEnv:
+    - GENOMAD_NETWORK
+    - GENOMAD_TOKEN_ID
+    - GENOMAD_OWNER_ADDRESS
+    - GENOMAD_AGENT_PRIVATE_KEY
+
+heartbeat:
+  script: scripts/heartbeat-hook.ts
+  description: Auto-sync, auto-update, y check-pending
